@@ -52,7 +52,7 @@ def simulate(N, temperature_range, mc_steps):
         chi = (M2_avg - M_avg**2) * beta / N**2
         specific_heat_data.append(C)
         susceptibility_data.append(chi)
-        # Критическая температура T_c была определена как 2.3 (это пример, вам нужно определить реальное значение)
+        # Критическая температура T_c была определена как 2.3
     T_c = 2.3
     inverse_temp_diff = [1 / (T - T_c) for T in temperature_range if T > T_c]
     susceptibility_above_Tc = [chi for T, chi in zip(temperature_range, susceptibility_data) if T > T_c]
